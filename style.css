@@ -11,7 +11,7 @@ body{
 }
 
 header{
-    
+    align-content: center;
     height: 200px;
 }
 nav{
@@ -21,7 +21,8 @@ nav{
     gap: 100px;
     height: 100px;
     text-align: center;
-    margin-left: 50px;
+    margin: 50px;
+    border-bottom: var(--light-color) solid;
 }
 .img{
     flex-grow: 1;
@@ -51,6 +52,7 @@ main {
     }
 p{
     color: var(--light-color);
+    
 }
     .icon{
         max-height: 20px;
@@ -58,9 +60,7 @@ p{
     }
     .p1 { grid-area: 1 / 1 / 2 / 2;
         text-align: center;
-        font-size: 30px;
-        border-bottom: var(--light-color) solid;
-        
+        font-size: 30px; 
     }
 
     .p2 { grid-area: 2 / 1 / 3 / 2; }
@@ -88,6 +88,7 @@ footer {
     justify-items: center;
     margin: 0 50px 0 50px;
     color: var(--dark-color);
+    border-top: var(--light-color) solid;
 }
 
     .whatsapp { 
