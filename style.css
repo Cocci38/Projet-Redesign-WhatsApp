@@ -8,6 +8,7 @@
 body{
     background:linear-gradient(#128c7e, #a9dbd8);
     margin: 0px;
+    display: grid;
 }
 
 header{
@@ -48,6 +49,14 @@ nav{
     color: #f5fafa;
 }
 @media (max-width: 1250px) {
+header{
+    width: 100%;
+    height: auto;
+}
+nav{
+    display: flex;
+    align-content: left;
+}
     .list-unstyled{
         flex-direction: column;
         height: auto;
