@@ -52,9 +52,15 @@ main {
 p{
     color: var(--light-color);
 }
+    .icon{
+        max-height: 20px;
+        max-width: 20px;
+    }
     .p1 { grid-area: 1 / 1 / 2 / 2;
         text-align: center;
         font-size: 30px;
+        border-bottom: var(--light-color) solid;
+        
     }
 
     .p2 { grid-area: 2 / 1 / 3 / 2; }
