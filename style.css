@@ -27,6 +27,17 @@ nav{
 .img{
     flex-grow: 1;
 }
+.list-unstyled{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 100px;
+    height: 100px;
+    text-align: center;
+    margin: 50px;
+    border-bottom: var(--light-color) solid;
+    flex-direction: row;
+}
 .btn{
     list-style-type: none;
     align-content: center;
@@ -35,6 +46,68 @@ nav{
 .btn a{
     text-decoration: none;
     color: #f5fafa;
+}
+@media (max-width: 1250px) {
+    .list-unstyled{
+        flex-direction: column;
+        height: auto;
+    }
+#burger{
+    width: 30px;
+    height: 2px;
+    background: var(--light-color);
+    display: inline-block;
+    position: relative;
+}
+#burger::before,
+#burger::after{
+    content: '';
+    width: 30px;
+    height: 2px;
+    background: var(--light-color);
+    display: inline-block;
+    position: absolute;
+    transform-origin: center;
+    transition: all 0.3s ease;
+}
+#burger::before{
+    top: -7px;
+}
+#burger::after{
+    top: 7px;
+}
+#burger.open{
+    background: transparent;
+}
+#burger.open::before{
+    transform:rotate(45deg);
+    top: 0;
+}
+#burger.open::after{
+    transform: rotate(-45deg);
+    top: 0;
+}
+header {
+    position:relative;
+    max-width:auto;
+}
+ul {
+background:var(--dark-color);
+position:absolute;
+width:100%;
+    left:0;
+top:100%;
+    transform:scaleY(0);
+transform-origin:center top;
+transition:all 0.3s ease;
+}
+ul.open {
+transform:scaleY(1);
+}
+ul li {
+padding:10px 0;
+text-align:center
+}
 }
 main {  
     display: grid;
