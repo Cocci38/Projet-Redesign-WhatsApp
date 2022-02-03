@@ -1,0 +1,177 @@
+:root{
+    --dark-color : #128c7e;
+    --middle-color : #a9dbd8;
+    --light-color : #f5fafa;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {  
+    display: grid;
+    grid-template-rows: repeat(auto-file, minmax(500px, 1fr));
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    background:linear-gradient(#128c7e, #a9dbd8);
+}
+.list-unstyled{
+        grid-area: 1 / 1 / 2 / 2;
+        display: flex;
+        border-bottom: var(--light-color) solid;
+        align-items: center;
+        justify-content: center;
+    }
+    .list-unstyled a{
+        color: var(--light-color);
+        padding: 14px 50px;
+        text-decoration: none;
+        text-align: center;
+    }
+    .img{
+        width: auto;
+        height: auto;
+    }
+    @media (max-width: 1250px) {
+        header{
+            width: 100%;
+            height: auto;
+        }
+        nav{
+            display: flex;
+            align-content: left;
+        }
+            .list-unstyled{
+                flex-direction: column;
+                height: auto;
+            }
+        #burger{
+            width: 30px;
+            height: 2px;
+            background: var(--light-color);
+            display: inline-block;
+            position: relative;
+        }
+        #burger::before,
+        #burger::after{
+            content: '';
+            width: 30px;
+            height: 2px;
+            background: var(--light-color);
+            display: inline-block;
+            position: absolute;
+            transform-origin: center;
+            transition: all 0.3s ease;
+        }
+        #burger::before{
+            top: -7px;
+        }
+        #burger::after{
+            top: 7px;
+        }
+        #burger.open{
+            background: transparent;
+        }
+        #burger.open::before{
+            transform:rotate(45deg);
+            top: 0;
+        }
+        #burger.open::after{
+            transform: rotate(-45deg);
+            top: 0;
+        }
+        header {
+            position:relative;
+            max-width:auto;
+        }
+        ul {
+        background:var(--dark-color);
+        position:absolute;
+        width:100%;
+            left:0;
+        top:100%;
+            transform:scaleY(0);
+        transform-origin:center top;
+        transition:all 0.3s ease;
+        }
+        ul.open {
+        transform:scaleY(1);
+        }
+        ul li {
+        padding:10px 0;
+        text-align:center
+        }
+        }
+
+    main { grid-area: 2 / 1 / 3 / 2;
+        display: grid;
+        grid-template-columns: repeat(auto-file, minmax(500px, 1fr));
+        grid-template-rows: repeat(6, 100px);
+        gap: 0px 0px;
+        grid-auto-flow: row dense;
+        margin: 100px;}
+        .appli-mobile { grid-area: 1 / 2 / 7 / 3;
+            width: auto;
+            max-height: 100%;
+            object-fit: cover;
+        }
+    p{
+        color: var(--light-color);
+        
+    }
+        .icon{
+            max-height: 20px;
+            max-width: 20px;
+        }
+        .p1 { grid-area: 1 / 1 / 2 / 2;
+            text-align: center;
+            font-size: 30px; 
+        }
+    
+        .p2 { grid-area: 2 / 1 / 3 / 2; }
+    
+        .p3 { grid-area: 3 / 1 / 4 / 2; }
+    
+        .p4 { grid-area: 4 / 1 / 5 / 2;
+            margin-left: 100px;}
+    
+        .p5 { grid-area: 5 / 1 / 6 / 2;
+            margin-left: 100px;}
+    
+        .p6 { grid-area: 6 / 1 / 7 / 2;
+            margin-left: 100px;}
+
+    footer { grid-area: 3 / 1 / 4 / 2; 
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 0px 20px;
+        grid-auto-flow: column;
+        height: 150px;
+        align-items: stretch;
+        align-content: center;
+        justify-items: center;
+        margin: 0 50px 0 50px;
+        color: var(--dark-color);
+        border-top: var(--light-color) solid;
+    }
+    .whatsapp { 
+        grid-area: 1 / 1 / 8 / 2;
+    }
+
+    .entreprise { 
+        grid-area: 1 / 2 / 8 / 3;
+    }
+
+    .telecharger { 
+        grid-area: 1 / 3 / 5 / 4;
+    }
+
+    .aide { 
+        grid-area: 1 / 4 / 6 / 5;
+    }
+    span{
+        display: flex;
+        flex-direction: column;
+    }
+        .w{
+            font-style: 50px;
+        }
